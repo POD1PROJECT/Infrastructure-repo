@@ -97,12 +97,12 @@ variable "namecheap_api_user" {
 variable "namecheap_api_key" {
   description = "Namecheap API key"
   type        = string
-  default     = "a3ca57241b794d44b0fc3387ca9b62a9"
+  default     = "45648a6247d34c2da4e947b4ae8392ea"
 }
 variable "namecheap_username" {
   description = "Namecheap username"
   type        = string
-  default     = "pod1"
+  default     = "ogodo"
 }
 variable "namecheap_client_ip" {
   description = "Client IP for Namecheap API access"
