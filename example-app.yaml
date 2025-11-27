@@ -45,10 +45,10 @@ spec:
   ingressClassName: external-nginx
   tls:
   - hosts:
-    - app.onyemsbhospitals.org
-    secretName: app-onyemsbhospitals.org
+    - app.onyemsbhospitals.org 
+    secretName: app-onyemsbhospitals.org 
   rules:
-  - host: app.onyemsbhospitals.org
+  - host: app.onyemsbhospitals.org 
     http:
       paths:
       - path: /
