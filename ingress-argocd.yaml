@@ -11,10 +11,10 @@ spec:
   ingressClassName: external-nginx
   tls:
   - hosts:
-    - argocd.onyemsbhospitals.org 
-    secretName: argocd-onyemsbhospitals.org 
+    - argocd.ceecloudtech.online
+    secretName: argocd-ceecloudtech.online
   rules:
-  - host: argocd.onyemsbhospitals.org 
+  - host: argocd.ceecloudtech.online
     http:
       paths:
       - path: /

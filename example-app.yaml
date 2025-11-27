@@ -45,10 +45,10 @@ spec:
   ingressClassName: external-nginx
   tls:
   - hosts:
-    - app.onyemsbhospitals.org 
-    secretName: app-onyemsbhospitals.org 
+    - app.ceecloudtech.online
+    secretName: app-ceecloudtech.online
   rules:
-  - host: app.onyemsbhospitals.org 
+  - host: app.ceecloudtech.online
     http:
       paths:
       - path: /

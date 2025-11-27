@@ -83,10 +83,10 @@ variable "zone_name" {
   default     = "example.com"
 }
 
-variable "domain-name" {
+variable "domain_name" {
   description = "Domain name to be created"
   type        = string
-  default     = "myapp.example.com"
+  default     = "ceecloudtech.online"
 }
 
 variable "namecheap_api_user" {
@@ -102,7 +102,7 @@ variable "namecheap_api_key" {
 variable "namecheap_username" {
   description = "Namecheap username"
   type        = string
-  default     = "ogodo"
+  default     = "ceecloud"
 }
 variable "namecheap_client_ip" {
   description = "Client IP for Namecheap API access"
