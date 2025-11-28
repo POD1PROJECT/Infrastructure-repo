@@ -62,7 +62,6 @@
 #   depends_on       = [helm_release.nginx_ingress, helm_release.cert_manager]
 # }
 
-
 provider "helm" {
   kubernetes = {
     host                   = aws_eks_cluster.eks.endpoint
@@ -81,21 +80,13 @@ provider "kubernetes" {
 data "aws_eks_cluster_auth" "eks" {
   name = aws_eks_cluster.eks.name
 }
-# resource "helm_release" "nginx_ingress" {
-#   name             = "nginx-ingress"
-#   repository       = "https://kubernetes.github.io/ingress-nginx"
-#   chart            = "ingress-nginx"
-#   version          = "4.12.0"
-#   namespace        = "ingress-nginx"
-#   create_namespace = true
-
 resource "helm_release" "nginx_ingress" {
   name             = "nginx-ingress"
   repository       = "https://kubernetes.github.io/ingress-nginx"
   chart            = "ingress-nginx"
+  version          = "4.12.0"
   namespace        = "ingress-nginx"
   create_namespace = true
-  timeout          = 600
 
   values     = [file("${path.module}/nginx-ingress-values.yaml")]
   depends_on = [aws_eks_node_group.eks_node_group]
